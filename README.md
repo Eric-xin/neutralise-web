@@ -30,6 +30,15 @@ To start using Neutralise-web, follow these instructions:
 npm start
 ```
 
+## Pictures
+
+Some images of the project:
+
+<div align="center">
+    <img src="./img/neutral.png" alt="Neutralise-web" width="800">
+    <img src="./img/index.png" alt="Neutralise-web" width="800">
+</div>
+
 ## Contributing
 We welcome contributions! Please follow these guidelines:
 
