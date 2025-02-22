@@ -1,0 +1,7 @@
+node_modules/
+build/
+
+Archive.7z
+
+.DS_Store
+package-lock.json
