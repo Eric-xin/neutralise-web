@@ -1,0 +1,83 @@
+/* Navbar with Glassmorphic Effect */
+.neutralize-navbar {
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent */
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* Navbar Logo */
+.neutralize-logo-navbar {
+  height: 50px;
+  margin-right: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Navigation Buttons - Set Text Color & Background */
+.nav-button {
+  color: #ffffff !important; /* Ensure white text */
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: none;
+  transition: 0.3s ease;
+  padding: 8px 15px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2); /* Glass effect */
+}
+
+/* Button Hover - Change Color */
+.nav-button:hover {
+  color: #fbc02d !important; /* Vibrant yellow */
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Authentication Section */
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* User Greeting */
+.nav-user {
+  color: white;
+  font-size: 1rem;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Mobile Drawer */
+.nav-drawer {
+  width: 250px;
+  background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+  color: white;
+  height: 100%;
+}
+
+.nav-drawer .MuiListItemText-primary {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.nav-drawer .MuiListItem-root:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

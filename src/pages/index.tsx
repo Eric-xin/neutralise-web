@@ -2,6 +2,8 @@ import React from "react";
 import logo from "./../logo.png";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import Navbar from "../components/NavBar"; // Importing Navbar
+import "../components/NavBar.css";
 import { Typography } from "@mui/material";
 import { logout, getUser } from "../service/auth";
 
@@ -28,6 +30,7 @@ function Index() {
   const handleLogout = () => {
     logout();
     setIsAuth(false);
+    setUser(null);
   };
 
   // Define a shared style for buttons
@@ -40,12 +43,19 @@ function Index() {
 
   return (
     <div className="neutralize-app">
+      {/* Navbar Component */}
+      <Navbar />
+
+      {/* Background Animation */}
       <div className="geographic-background" />
+
+      {/* Main Content */}
       <header className="neutralize-header">
         <img src={logo} alt="Neutralize Logo" className="neutralize-logo" />
         <Typography variant="h3" component="h1" className="neutralize-title">
           Neutralize
         </Typography>
+        
         {isAuth && user ? (
           <>
             <Typography variant="h5" align="center" gutterBottom>
@@ -117,6 +127,7 @@ function Index() {
             </Button>
           </Stack>
         )}
+
         <a
           href="./about"
           target="_blank"
