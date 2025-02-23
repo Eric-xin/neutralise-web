@@ -14,6 +14,7 @@ export const login = async(payload: any) => {
   let data: any = response.data;
   if (data.access_token){
     Cookies.set("token", data.access_token);
+    // Cookies.set("token", data.access_token, { secure: true, sameSite: "Strict" });
     window.location.replace("/")
   } else {
     alert(data.error);
