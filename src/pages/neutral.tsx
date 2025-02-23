@@ -74,11 +74,12 @@ const BiasAnalysisPage: React.FC = () => {
         throw new Error("API base URL is not defined");
       }
 
-      const response = await fetch(api.defaults.baseURL + "/analyze_mult", {
+      const response = await fetch(api.defaults.baseURL + "/encrypted/analyze_mult", {
+        // const response = await fetch(api.defaults.baseURL + "/analyze_mult", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // Optionally include auth headers here, e.g. Authorization: Bearer <token>
+          "Authorization": "Bearer " + localStorage.getItem("token"),
         },
         body: JSON.stringify({ text: inputText }),
       });

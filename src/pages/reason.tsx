@@ -26,8 +26,15 @@ const AnalysisPage = () => {
     }
 
     try {
-      const response = await api.post("/reduce_bias", formData, {
-        headers: { "Content-Type": "multipart/form-data" }
+    //   const response = await api.post("/reduce_bias", formData, {
+    //     headers: { "Content-Type": "multipart/form-data" }
+    //   });
+
+      const response = await api.post("/encrypted/reduce_bias", formData, {
+        headers: { 
+            "Content-Type": "multipart/form-data",
+            "Authorization": "Bearer " + localStorage.getItem("token"),
+        }
       });
 
       if (response.status !== 200) throw new Error("Failed to fetch analysis");
