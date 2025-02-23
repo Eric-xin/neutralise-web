@@ -3,6 +3,7 @@ import { useState } from "react";
 import { TextField, Button, Paper, Box, Typography } from "@mui/material";
 import ReactMarkdown from "react-markdown";
 import Header from "./../components/neutralHeader";
+import api from "../service/api";
 
 interface BiasAnalysis {
   Left: number;
@@ -69,7 +70,11 @@ const BiasAnalysisPage: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("http://localhost:8000/api/analyze_mult", {
+      if (!api.defaults.baseURL) {
+        throw new Error("API base URL is not defined");
+      }
+
+      const response = await fetch(api.defaults.baseURL + "/analyze_mult", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
