@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AppBar, Toolbar, IconButton, Button, Drawer, List, ListItem, ListItemText, Typography, useMediaQuery } from "@mui/material";
+import { AppBar, Toolbar, IconButton, Button, Drawer, List, ListItem, ListItemText, useMediaQuery } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { logout, getUser } from "../service/auth";
 import logo from "./../logo.png"; // Replace with your actual logo
