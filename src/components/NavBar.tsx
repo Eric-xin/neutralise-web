@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AppBar, Toolbar, IconButton, Button, Drawer, List, ListItem, ListItemText, useMediaQuery } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { logout, getUser } from "../service/auth";
-import logo from "./../logo.png"; // Replace with your actual logo
+import rlogo from "./../ic+3.svg";
 
 // Define an interface for the user
 interface User {
@@ -38,7 +38,15 @@ function Navbar() {
       <AppBar position="fixed" className="neutralize-navbar">
         <Toolbar>
           {/* Logo */}
-          <img src={logo} alt="Neutralize Logo" className="neutralize-logo-navbar" />
+          {/* <img src={rlogo} alt="Neutralize Logo" className="neutralize-logo-navbar" /> */}
+          <div className="neutralize-logo-with-text">
+            <img
+              src={rlogo}
+              alt="Neutralize Logo"
+              className="neutralize-logo-navbar"
+            />
+            <span className="neutralize-logo-text">Neutralize</span>
+          </div>
 
           {/* Navigation Links (Hidden on Mobile) */}
           {!isMobile && (

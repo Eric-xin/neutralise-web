@@ -8,10 +8,22 @@
   color: white;
 }
 
-/* Navbar Logo */
-.neutralize-logo-navbar {
-  height: 50px;
+.neutralize-logo-with-text {
+  display: inline-flex;      /* or `flex` if it’s a block-level nav */
   margin-right: auto;
+  align-items: center;      /* center vertically */
+  gap: 8px;                  /* space between icon & text */
+}
+
+.neutralize-logo-navbar {
+  height: 50px;              /* your existing height */
+  margin: 0;                 /* remove auto margins */
+}
+
+.neutralize-logo-text {
+  font-size: 1rem;
+  font-weight: bold;
+  /* margin: 0;  already handled by gap */
 }
 
 /* Navigation Links */

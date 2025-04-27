@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "./../logo.png";
+import logo from "./../ictt.png";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Navbar from "../components/NavBar"; // Importing Navbar
 import "../components/NavBar.css";
-import { Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import { logout, getUser } from "../service/auth";
 
 interface User {
@@ -52,10 +52,51 @@ function Index() {
       {/* Main Content */}
       <header className="neutralize-header">
         <img src={logo} alt="Neutralize Logo" className="neutralize-logo" />
-        <Typography variant="h3" component="h1" className="neutralize-title">
-          Neutralize
+        <Typography
+          variant="h5"
+          component="h2"
+          sx={{
+            textAlign: "center",
+            maxWidth: 600,
+            mx: "auto",
+            my: 3,
+            fontWeight: 600,
+            lineHeight: 1.4,
+            letterSpacing: 0.5,
+            color: "primary.dark",
+            whiteSpace: "nowrap",
+            overflow: "visible",
+          }}
+        >
+          See Beyond the{" "}
+          <Box
+            component="span"
+            sx={{
+              color: "secondary.main",
+              fontStyle: "italic",
+              bgcolor: "secondary.light",
+              px: 0.5,
+              borderRadius: 0.5,
+            }}
+          >
+            Bias
+          </Box>
+          . Find{" "}
+          <Box
+            component="span"
+            sx={{
+              color: "secondary.main",
+              fontStyle: "italic",
+              bgcolor: "secondary.light",
+              px: 0.5,
+              borderRadius: 0.5,
+            }}
+          >
+            Clearity
+          </Box>{" "}
+          in Every Click.
         </Typography>
-        
+
         {isAuth && user ? (
           <>
             <Typography variant="h5" align="center" gutterBottom>

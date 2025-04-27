@@ -8,7 +8,7 @@ import {
   Stack,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import logo from "./../logo.png";
+import logo from "./../ictt.png";
 import { Link } from "react-router-dom";
 
 function About() {

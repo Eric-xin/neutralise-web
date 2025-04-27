@@ -1,7 +1,7 @@
 # Neutralise-web
 
 <div align="center">
-    <img src="./src/logo.png" alt="Neutralise-web" width="200">
+    <img src="./src/ictt.png" alt="Neutralise-web" width="200">
     <p>Neutralise-web</p>
 </div>
 

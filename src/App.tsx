@@ -6,6 +6,7 @@ import Dashboard from "./pages/dashboard";
 import AnalysisPage from './pages/reason';
 import Index from './pages/index';
 import SignIn from './pages/signin';
+import Contact from './pages/contact';
 import SignUp from "./pages/signup";
 import BiasAnalysisPage from "./pages/neutral";
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/signup" component={SignUp} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/neutral" component={BiasAnalysisPage} />
+          <Route path="/contact" component={Contact} />
         </Switch>
   </BrowserRouter>
   );
